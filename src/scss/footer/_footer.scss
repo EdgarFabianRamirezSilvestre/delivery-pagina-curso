@@ -3,32 +3,46 @@
 
 .footer{
     background-color: v.$secundario;
+    padding-top: v.$separacion;
     color: v.$blanco;
     &__grid{
         padding: v.$separacion 0;
         @include m.tablet{
-            @include m.grid(3,2rem);
+            @include m.grid(3,1rem);
         }
     }
     &__widget{
-
+        margin-bottom: v.$separacion;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
     }
     &__heading{
         color: v.$blanco;
+        margin-bottom: 0;
+        text-align: center;
+        @include m.tablet{
+            text-align:left;
+        }
     }
     &__nav{
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
         color: v.$blanco;
     }
-    &__link{
-        text-decoration: none;
-        color: v.$blanco;
-    }
+    &__nav,
     &__texto{
+        margin-top: 2rem;
+    }
+    &__link,
+    &__texto{
+        font-size: 2rem;
+        line-height: 1.8;
+        text-align: center;
         color: v.$blanco;
-        line-height: 1.5;
+        @include m.tablet{
+            text-align:left;
+        }
     }
     &__copyright{
         background-color: v.$primario;
